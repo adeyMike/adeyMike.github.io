@@ -1,0 +1,86 @@
+{
+  "resume": [
+    {
+      "fullName": "Michael Adeyinfa",
+      "position": "Junior Developer - New Grad",
+      "email": "adeyinfa@sheridancollege.ca",
+      "phoneNum": "+1-647-706-4107",
+      "blurb": "Enthusiastic, highly-motivated Software Development graduate with proven leadership capabilities, enjoys taking initiative. Seeking a growth-oriented organization with multiple avenues of opportunity.",
+      "languages": "C#, PL/SQL, JavaScript, C, Android, ASP.NET MVC, ADO.NET",
+      "technologies": "MySQL, BitBucket, Node.JS, Unix, Pelles C, Visual Studio, Eclipse, Android SDK",
+      "jobs": [
+        {
+          "date": "May 2018 - August 2018",
+          "title": "IT Specialist",
+          "company": "Cogeco Peer 1",
+          "location": "Toronto, Ontario.",
+          "details": [
+            "Designed and exported KPI metrics from the internal CSA application, to generate and display relevant data using Excel (PivotTables and Macros) and PowerPoint.",
+            "Monitored and conducted first response troubleshooting to the vCloud Usage Meter Web portal for internal use.",
+            "Assisted the Cloud Infrastructure Department with documenting IT processes, such as licensing management and change management."
+          ]
+        },
+        {
+          "date": "September 2017 – January 2018",
+          "title": "Help Desk Technician",
+          "company": "National Steel Car Limited",
+          "location": "Hamilton, Ontario.",
+          "details": [
+            "Received & documented incoming help requests from end-users via telephone, e-mail and Service Desk in a professional manner.",
+            "Applied diagnostic utilities to aid in troubleshooting, and tested fixes to ensure problems have been adequately resolved.",
+            "Performed hands-on fixes at the desktop level, including installing and upgrading software, installed hardware and configured systems and applications.",
+            "Performed preventative maintenance, including checking and cleaning of workstations, printers, and peripherals."
+          ]
+        },
+        {
+          "date": "November 2016 - September 2017",
+          "title": "Laptop and Classroom Support Technologist",
+          "company": "Sheridan College",
+          "location": "Mississauga, Ontario",
+          "details": [
+            "Provided friendly and comprehensive Laptop support to students, faculty and staff at the College.",
+            "Classroom support to clients using the mobile labs, smart classrooms and Computer labs.",
+            "Signed out laptops and instructional equipment to students, faculty and staff.",
+            "Quality assurance of laptops and imaging of hard drives in laptops and desktop computers.",
+            "Assisted with preventative maintenance of the IT equipment in Classrooms, Labs and Learning Commons.",
+            "IT Asset Inventory tracking using Microsoft Excel and SharePoint 2010."
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "Auxilium",
+          "toolsUsed": "ASP.NET MVC, Bootstrap, C#, MySQL, Java, Android Studio, AWS Beanstalk, JSON",
+          "details": "- Created an ASP.NET MVC application that functions as a basic online store with CRUD operations, employing the Entity framework - Complete with administrator access to alter what products were offered. The data used for the models were locally stored in a MySQL database and were queried using SQL."
+        },
+        {
+          "name": "GlaxoSmithKline - Informational website (unaffiliated)",
+          "toolsUsed": "Javascript, JQuery, JQuery Mobile, JSON.",
+          "details": "- Collaborative effort along with 3 other individuals to create a multi-page mobile web application - Provides a summary of the company’s products as well as general health information - Includes the location of the organization’s headquarters, appended as a map with a marker using Google Maps API - Employs Javascript for object-oriented programming, AJAX to handle data retrieval from JSON and XML files - JQuery and JQuery Mobile to handle the layout and presentation of the data."
+        },
+        {
+          "name": "AdeyStore",
+          "toolsUsed": "ASP.NET MVC, Bootstrap, C#, MySQL.",
+          "details": "- Created an ASP.NET MVC application that functions as a basic online store with CRUD operations, employing the Entity framework - Complete with administrator access to alter what products were offered. The data used for the models were locally stored in a MySQL database and were queried using SQL."
+        },
+        {
+          "name": "SpellChecker",
+          "toolsUsed": "C, Pelles C.",
+          "details": "- Created a Spell Check console application using the C language - Retrieves words from a text file and compares the words with a dictionary - User is also able to search for words, insert or delete words, load and save a revised version of the dictionary - Employs the Hash Table data structure to store the words and linear probing to find the next element. - Returns the number of correct and incorrect words."
+        }
+      ],
+      "education": [
+        {
+          "date": "2016 | 2018",
+          "awarded": "Advanced Diploma in Software Development and Network Engineering",
+          "institution": "Sheridan College, Oakville, Ontario."
+        },
+        {
+          "date": "2012 | 2014",
+          "awarded": "Bachelor in Applied Finance",
+          "institution": "Macquarie University, Sydney, Australia."
+        }
+      ]
+    }
+  ]
+}

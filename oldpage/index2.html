@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume - Michael Adeyinfa</title>
+    <script src="../libs/angularjs-1.5.0.min.js"></script>
+    <script src="../js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+<body>
+<div ng-app="myApp" ng-controller="resumeController">
+    <div id="header">
+        <div class="container">
+            <h1>{{dataModel.resume.fullName}}</h1>
+            <h3>{{dataModel.resume.blurb}}</h3>
+        </div>
+    </div>
+    <div id="skills">
+        <div class="container">
+            <h4>Skills</h4>
+            <div class="clearfix">
+                <div class="left-side"><p>Languages</p></div>
+                <div id="lang"><p>{{dataModel.resume.languages}}</p></div>
+            </div>
+            <div class="clearfix">
+                <div class="left-side"><p>Technologies</p></div>
+                <div id="tech"><p>{{dataModel.resume.technologies}}</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="experience">
+        <div class="container">
+            <h4>Experience</h4>
+            <div class="job" ng-repeat="job in dataModel.resume.jobs">
+                <div class="left-block"><p class="dates">{{job.date}}</p></div>
+                <div class="right-block">
+                    <p><b>{{job.title}}</b>, <i>{{job.company}}</i>, {{job.location}}</p>
+                    <ul>
+                        <li ng-repeat="detail in job.details">
+                            {{detail}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="projects">
+        <div class="container">
+            <h4>Projects</h4>
+            <div class="project" ng-repeat="project in dataModel.resume.projects">
+                <p><b>{{project.name}}</b>, <i>{{project.toolsUsed}}</i></p>
+                <p>{{project.details}}</p>
+            </div>
+        </div>
+    </div>
+    <div id="education">
+        <div class="container">
+            <h4>Education</h4>
+            <div class="accolade" ng-repeat="accolade in dataModel.resume.education">
+                <div class="left-side"><p class="dates">{{accolade.date}}</p></div>
+                <div class="right-side"><p><b>{{accolade.awarded}}</b>,
+                    <i>{{accolade.institution}}</i></p></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

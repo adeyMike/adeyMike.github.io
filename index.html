@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Michael Adeyinfa's Resume</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive Resume">
+    <meta name="author" content="Michael Adeyinfa">
+    <!-- Angular JS -->
+    <script src="libs/angularjs-1.5.0.min.js"></script>
+
+    <!-- Custom JS-->
+    <script src="js/script.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+
+    <!-- FontAwesome JS-->
+    <script type="text/javascript" src="libs/fontawesome-all.min.js"></script>
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="libs/pillar-3.css">
+
+</head>
+
+<body>
+<div ng-app="myApp" ng-controller="resumeController">
+<article class="resume-wrapper text-center position-relative">
+    <div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
+        <header class="resume-header pt-4 pt-md-0">
+            <div class="media flex-column flex-md-row">
+                <img class="mr-3 img-fluid picture mx-auto" src="libs/myPic.jpg" alt="Michael's photo">
+                <div class="media-body p-4 d-flex flex-column flex-md-row mx-auto mx-lg-0">
+                    <div class="primary-info">
+                        <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">{{dataModel.resume[0].fullName}}</h1>
+                        <div class="title mb-3">{{dataModel.resume[0].position}}</div>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="mailto:{{dataModel.resume[0].email}}"><i class="far fa-envelope fa-fw mr-2" data-fa-transform="grow-3"></i>{{dataModel.resume[0].email}}</a></li>
+                            <li><a href="tel:{{dataModel.resume[0].phoneNum}}"><i class="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i>{{dataModel.resume[0].phoneNum}}</a></li>
+                        </ul>
+                    </div><!--//primary-info-->
+                    <div class="secondary-info ml-md-auto mt-2">
+                        <ul class="resume-social list-unstyled">
+                            <li class="mb-3"><a href="#"><span class="fa-container text-center mr-2"><i class="fab fa-github-alt fa-fw"></i></span>adeymike.github.io</a></li>
+                            <li class="mb-3"><a href="https://bitbucket.org/michaelAdeyinfa"><span class="fa-container text-center mr-2"><i class="fab fa-bitbucket fa-fw"></i></span>bitbucket.org/michaelAdeyinfa</a></li>
+                        </ul>
+                    </div><!--//secondary-info-->
+
+                </div><!--//media-body-->
+            </div><!--//media-->
+        </header>
+        <div class="resume-body p-5">
+            <section class="resume-section summary-section mb-5">
+                <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Summary</h2>
+                <div class="resume-section-content">
+                    <p class="mb-0">{{dataModel.resume[0].blurb}}</p>
+                </div>
+            </section><!--//summary-section-->
+            <div class="row">
+                <div class="col-lg-9">
+                    <section class="resume-section experience-section mb-5">
+                        <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Work Experience</h2>
+                        <div class="resume-section-content">
+                            <div class="resume-timeline position-relative" ng-repeat="job in dataModel.resume[0].jobs">
+                                <article class="resume-timeline-item position-relative pb-5">
+                                    <div class="resume-timeline-item-header mb-2">
+                                        <div class="d-flex flex-column flex-md-row">
+                                            <h3 class="resume-position-title font-weight-bold mb-1">{{job.title}}</h3>
+                                            <div class="resume-company-name ml-auto">{{job.company}}</div>
+                                        </div><!--//row-->
+                                        <div class="resume-position-time">{{job.date}}</div>
+                                    </div><!--//resume-timeline-item-header-->
+                                    <div class="resume-timeline-item-desc">
+                                        <h4 class="resume-timeline-item-desc-heading font-weight-bold">Details:</h4>
+                                        <ul>
+                                            <li ng-repeat="detail in job.details">{{detail}}</li>
+                                        </ul>
+                                    </div><!--//resume-timeline-item-desc-->
+                                </article><!--//resume-timeline-item-->
+                            </div><!--//resume-timeline-->
+                        </div>
+                    </section><!--//experience-section-->
+                </div>
+                <div class="col-lg-3">
+                    <section class="resume-section skills-section mb-5">
+                        <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Skills &amp; Tools</h2>
+                        <div class="resume-section-content">
+                            <div class="resume-skill-item">
+                                <h4 class="resume-skills-cat font-weight-bold">Frontend</h4>
+                                <ul class="list-unstyled mb-3">
+                                    <li class="mb-2">
+                                        <div class="resume-skill-name">AngularJS</div>
+                                        <div class="progress resume-progress">
+                                            <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 98%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </li>
+                                    <li class="mb-2">
+                                        <div class="resume-skill-name">JavaScript</div>
+                                        <div class="progress resume-progress">
+                                            <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 96%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </li>
+
+                                    <li class="mb-2">
+                                        <div class="resume-skill-name">Jquery</div>
+                                        <div class="progress resume-progress">
+                                            <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 92%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div><!--//resume-skill-item-->
+
+                            <div class="resume-skill-item">
+                                <h4 class="resume-skills-cat font-weight-bold">Backend</h4>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <div class="resume-skill-name">Java</div>
+                                        <div class="progress resume-progress">
+                                            <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 95%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </li>
+                                    <li class="mb-2">
+                                        <div class="resume-skill-name">.NET</div>
+                                        <div class="progress resume-progress">
+                                            <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 92%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div><!--//resume-skill-item-->
+
+                            <div class="resume-skill-item">
+                                <h4 class="resume-skills-cat font-weight-bold">Others</h4>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item"><span class="badge badge-light">Code Review</span></li>
+                                    <li class="list-inline-item"><span class="badge badge-light">Git</span></li>
+                                    <li class="list-inline-item"><span class="badge badge-light">Unit Testing</span></li>
+                                </ul>
+                            </div><!--//resume-skill-item-->
+                        </div><!--resume-section-content-->
+                    </section><!--//skills-section-->
+                    <section class="resume-section education-section mb-5">
+                        <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Education</h2>
+                        <div class="resume-section-content">
+                            <ul class="list-unstyled">
+                                <li class="mb-2" ng-repeat="accolade in dataModel.resume[0].education">
+                                    <div class="resume-degree font-weight-bold">{{accolade.awarded}}</div>
+                                    <div class="resume-degree-org">{{accolade.institution}}</div>
+                                    <div class="resume-degree-time">{{accolade.date}}</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section><!--//education-section-->
+                    <section class="resume-section reference-section mb-5">
+                    </section><!--//interests-section-->
+                    <section class="resume-section language-section mb-5">
+                        <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Language</h2>
+                        <div class="resume-section-content">
+                            <ul class="list-unstyled resume-lang-list">
+                                <li class="mb-2"><span class="resume-lang-name font-weight-bold">English</span> <small class="text-muted font-weight-normal">(Native)</small></li>
+                            </ul>
+                        </div>
+                    </section><!--//language-section-->
+                    <section class="resume-section interests-section mb-5">
+                        <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Interests</h2>
+                        <div class="resume-section-content">
+                            <ul class="list-unstyled">
+                                <li class="mb-1">Soccer</li>
+                                <li class="mb-1">Basketball</li>
+                                <li class="mb-1">Music Curation</li>
+                            </ul>
+                        </div>
+                    </section><!--//interests-section-->
+
+                </div>
+            </div><!--//row-->
+        </div><!--//resume-body-->
+
+
+    </div>
+</article>
+
+</div>
+<footer class="footer text-center pt-2 pb-5">
+    <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+    <small class="copyright"> Original design provided with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a></small>
+</footer>
+<script type="text/javascript" src="libs/jquery-3.3.1.min.js"></script>
+</body>
+</html> 
+

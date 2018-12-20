@@ -1,0 +1,21 @@
+.container {
+    /*overflow: hidden;*/
+    /*width: 100%;*/
+    /*min-height: 36px; !* Remember absolute positioning is outside the page flow! *!*/
+    /*position: relative;*/
+}
+.clearfix {
+    /*display: block;*/
+}
+.left-side {
+    /*position: absolute;*/
+    /*left: 9px;*/
+    /*top: 3px;*/
+    /*width: 13px;*/
+}
+.right-side {
+    /*position: absolute;*/
+    /*right: 0px;*/
+    /*top: 0px;*/
+    /*width: 100px;*/
+}
